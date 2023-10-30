@@ -1,11 +1,12 @@
-// Импортируем хук
-import { Button } from "Button/Button";
-import { useSelector } from "react-redux";
-// Импортируем объект значений фильтра
+import { Button } from "components/Button/Button";
 import { statusFilters } from "../../redux/constants";
+import { useSelector } from 'react-redux';
+import { getStatusFilter } from "redux/selectors";
+
 export const StatusFilter = () => {
   // Получаем значение фильтра из состояния Redux
-  const filter = useSelector(state => state.filters.status);
+  const filter = useSelector(getStatusFilter);
+
   return (
     <div>
       <Button selected={filter === statusFilters.all}>All</Button>
