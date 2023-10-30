@@ -1,3 +1,5 @@
+import { ButtonStyled } from "./Button.styled";
+
 export const Button = ({
     selected = false,
     type = 'button',
@@ -5,14 +7,11 @@ export const Button = ({
     ...otherProps
   }) => {
     return (
-      <button
-        className={clsx(css.btn, {
-          [css.isSelected]: selected,
-        })}
+      <ButtonStyled
         type={type}
         {...otherProps}
       >
         {children}
-      </button>
+      </ButtonStyled>
     );
   };
