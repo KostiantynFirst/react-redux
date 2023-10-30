@@ -1,5 +1,5 @@
 import { StyledUl, TaskListItem } from "./TaskLists.styled"
-import { useVisibleTasks } from "redux/hooks/hooks";
+import { useVisibleTasks } from "redux/hooks/useVisibleTasks";
 import { Task } from "components/Task/Task";
 
 export const TaskList = () => {
