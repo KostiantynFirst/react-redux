@@ -1,12 +1,17 @@
 import { StyledUl, TaskListItem } from "./TaskLists.styled"
 import { useSelector } from 'react-redux';
+import { statusFilters } from "redux/constants";
 import { getTasks } from "redux/selectors";
 
-const getVisibleTasks = (tasks, statusFilter) => {
-    switch (statusFilter) {
-        case statusFilter.active:
+const useVisibleTasks = () => {
+
+    const tasks = useSelector(getTasks);
+    const filter = useSelector(getTasks);
+
+    switch (filter) {
+        case statusFilters.active:
             return tasks.filter(task => !task.completed);
-        case statusFilter.completed:
+        case statusFilters.completed:
             return tasks.filter(task => task.completed);
         default:
             return tasks;
@@ -15,9 +20,8 @@ const getVisibleTasks = (tasks, statusFilter) => {
 
 export const TaskList = () => {
 
-    const tasks = useSelector(getTasks);
-    const filter = useSelector(getTasks);
-    const visibleTasks = getVisibleTasks(tasks, filter);
+
+    const visibleTasks = useVisibleTasks();
 
     return (
         <StyledUl>
