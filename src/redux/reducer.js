@@ -26,7 +26,18 @@ const tasksReducer = (state = taskInitialStates, action) => {
                     if(task.id !== action.payload) return task;
                     return  {...task, completed: !task.completed,
                 };
-            }) 
+            });
+
+        case 'tasks/toggleAllCompleted': 
+            return state.map(task => {
+                if (task.completed) {
+                    return task;
+                }
+                return {
+                    ...task,
+                    completed: true,
+                }
+            });
 
         default:
             return state;

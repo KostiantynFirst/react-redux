@@ -25,6 +25,18 @@ export const toggleCompleted = taskId => {
     };
 };
 
+export const toggleAllCompleted = () => {
+    return {
+        type: 'tasks/toggleAllCompleted',
+    };
+};
+
+export const deleteAllCompleted = () => {
+    return {
+        type: 'tasks/deleteAllCompleted',
+    };
+};
+
 export const setStatusFilter = value => {
     return {
         type: 'filters/setStatusFilter',
