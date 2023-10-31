@@ -6,8 +6,9 @@ import { setStatusFilter } from "redux/actions";
 
 export const StatusFilter = () => {
   // Получаем значение фильтра из состояния Redux
-  const filter = useSelector(getStatusFilter);
+
   const dispatch = useDispatch();
+  const filter = useSelector(getStatusFilter);
 
   const handleChange = value => dispatch(setStatusFilter(value))
 
