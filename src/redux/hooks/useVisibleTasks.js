@@ -1,11 +1,11 @@
 import { useSelector } from 'react-redux';
 import { statusFilters } from "redux/constants";
-import { getTasks } from "redux/selectors";
+import { getStatusFilter, getTasks } from "redux/selectors";
 
 export const useVisibleTasks = () => {
 
     const tasks = useSelector(getTasks);
-    const filter = useSelector(getTasks);
+    const filter = useSelector(getStatusFilter);
 
     switch (filter) {
         case statusFilters.active:
