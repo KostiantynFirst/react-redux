@@ -45,7 +45,7 @@ const tasksReducer = (state = taskInitialStates, action) => {
 }
 
 const filtersInitialStates = {
-    status: statusFilters.all,
+    status: statusFilters.all
 }
 
 const filtersReducer = (state = filtersInitialStates, action) => {
