@@ -4,11 +4,11 @@ import { Task } from "components/Task/Task";
 
 export const TaskList = () => {
 
-    const visibleTasks = useVisibleTasks();
+    const tasks = useVisibleTasks();
 
     return (
         <StyledUl>
-            {visibleTasks.map(task => (
+            {tasks.map(task => (
                 <TaskListItem key={task.id}>
                     <Task task={task} />
                 </TaskListItem>
