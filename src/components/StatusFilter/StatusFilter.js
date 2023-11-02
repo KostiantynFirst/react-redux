@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setStatusFilter } from "redux/actions";
 import { statusFilters } from "redux/constants";
 import { getStatusFilter } from "redux/selectors";
-
+import { FilterContainer } from "./StatusFilter.styled";
 
 export const StatusFilter = () => {
 
@@ -13,7 +13,7 @@ export const StatusFilter = () => {
   const handleChange = value => dispatch(setStatusFilter(value));
 
   return (
-    <div style={{ display: 'flex', gap: 4 }}>
+    <FilterContainer>
       <Button 
         selected={filter === statusFilters.all}
         onClick={() => handleChange(statusFilters.all)}
@@ -32,6 +32,6 @@ export const StatusFilter = () => {
       >
           Completed
       </Button>
-    </div>
+    </FilterContainer>
   );
 };
