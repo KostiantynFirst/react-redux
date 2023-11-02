@@ -50,12 +50,12 @@ const filtersInitialStates = {
 
 const filtersReducer = (state = filtersInitialStates, action) => {
         switch (action.type) {
-            case "filters/setStatusFilter": {
+            case "filters/setStatusFilter": 
                 return {
                 ...state,
                 status: action.payload,
-                }
-            }   
+                };
+   
 
         default: 
             return state;

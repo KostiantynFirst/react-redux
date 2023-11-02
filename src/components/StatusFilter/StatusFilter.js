@@ -13,7 +13,7 @@ export const StatusFilter = () => {
   const handleChange = value => dispatch(setStatusFilter(value));
 
   return (
-    <div>
+    <div style={{ display: 'flex', gap: 4 }}>
       <Button 
         selected={filter === statusFilters.all}
         onClick={() => handleChange(statusFilters.all)}

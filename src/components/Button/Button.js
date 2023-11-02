@@ -7,7 +7,7 @@ export const Button = ({
     ...otherProps
   }) => {
     return (
-      <ButtonStyled
+      <ButtonStyled 
         type={type}
         {...otherProps}
       >
