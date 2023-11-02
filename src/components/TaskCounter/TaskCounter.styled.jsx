@@ -8,7 +8,6 @@ export const CounterContainer = styled.div`
 `;
 
 export const CounterContainerParagraph = styled.p`
-
     margin: 5px 0;
     font-size: 14px;
 `;
