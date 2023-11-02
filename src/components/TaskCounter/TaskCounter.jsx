@@ -1,4 +1,4 @@
-import { CounterContainer } from "./TaskCounter.styled"
+import { CounterContainer, CounterContainerParagraph } from "./TaskCounter.styled"
 import { useTaskCount } from "redux/hooks/useTaskCount"
 
 export const TaskCounter = () => {
@@ -7,8 +7,8 @@ export const TaskCounter = () => {
 
     return (
         <CounterContainer>
-            <p>Active: {active} </p>
-            <p>Completed: {completed} </p>
+            <CounterContainerParagraph>Active: {active} </CounterContainerParagraph>
+            <CounterContainerParagraph>Completed: {completed} </CounterContainerParagraph>
         </CounterContainer>
     )
 }
